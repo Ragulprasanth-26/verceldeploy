@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "ragul-prasanth-dbe45-75f8a",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

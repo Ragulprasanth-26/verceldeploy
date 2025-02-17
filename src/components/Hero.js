@@ -1,14 +1,14 @@
 import React from 'react'
 import HeroImg from '../asserts/hero.jpg'
-import { AiOutlineWhatsApp,AiOutlineFacebook,AiOutlineLinkedin } from 'react-icons/ai'
+import { AiOutlineInstagram,AiOutlineFacebook,AiOutlineLinkedin } from 'react-icons/ai'
 const Hero = () => {
 
   const config ={
     subtitle :'Im a Full-stack developer',
     social: {
-      whatsapp:'',
-      facebook:'',
-      linkedlin:''
+      instagram:'https://www.instagram.com/ragul_crick26?igsh=MTk2aTdxaDYwd2I5YQ==',
+      facebook:'https://www.facebook.com/share/15xNLRkeDE/',
+      linkedlin:'https://www.linkedin.com/in/ragul-prasanth-a-151893321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
     }
   }
   return (
@@ -18,7 +18,7 @@ const Hero = () => {
                 <p className='text-2xl'>{config.subtitle}</p>
             </h1>
             <div className='flex py-10 '>
-                <a href={config.social.whatsapp} className='pr-5 hover:text-white'><AiOutlineWhatsApp size={40}/></a>
+                <a href={config.social.instagram} className='pr-5 hover:text-white'><AiOutlineInstagram size={40}/></a>
                 <a href={config.social.facebook} className='pr-5 hover:text-white'><AiOutlineFacebook size={40} /></a>
                 <a href={config.social.linkedlin} className='pr-5 hover:text-white'><AiOutlineLinkedin size={40}/></a>
             </div>

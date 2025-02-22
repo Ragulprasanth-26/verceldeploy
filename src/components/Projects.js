@@ -8,13 +8,13 @@ const Projects = () => {
          {
             image: WebSiteImg1,
             description:'A Eccomence website is build with MERN stack.',
-            links:'',
+            links:'https://github.com/Ragulprasanth-26/mini-eccomance',
 
         },
         {
             image: Todolist,
             description:'Todolist Application is built with purly React.js.',
-            links:'',
+            links:'https://github.com/Ragulprasanth-26/todolist-togcolor/tree/main/Todolist',
          },
          {
             image: Java,

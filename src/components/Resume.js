@@ -3,7 +3,7 @@ import ResumeImg from '../asserts/resume.jpg'
 
 const Resume = () => {
   const config ={
-    link : 'https://www.canva.com/design/DAGUfZdSKlg/_nnYIIOIO9CXehaeZZPHFg/view?utm_content=DAGUfZdSKlg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hfc6595c801'
+    link : 'https://www.canva.com/design/DAGgXBz0aeQ/Sb-RlLfP7emMziELN7czow/view?utm_content=DAGgXBz0aeQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hafcd7b8d76'
   }
   return (
     <section className='flex flex-col md:flex-row bg-secondary px-5' id='resume'>

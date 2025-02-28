@@ -1,7 +1,7 @@
 import React from 'react'
 import WebSiteImg1 from '../asserts/ecommerce-websites.jpg'
 import Todolist from '../asserts/todolist.png'
-import Java from '../asserts/Java-Logo.png'
+import X from '../asserts/X-logo.jpg'
 const Projects = () => {
    const config ={
       projects :[
@@ -17,8 +17,8 @@ const Projects = () => {
             links:'https://github.com/Ragulprasanth-26/todolist-togcolor/tree/main/Todolist',
          },
          {
-            image: Java,
-            description:'JAVA based Train ticket booking software.',
+            image: X,
+            description:'X-clone app with the features of the twitter app.It is in developing state so the link will attach soon',
             links:'',
 
         }

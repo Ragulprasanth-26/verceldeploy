@@ -2,6 +2,7 @@ import React from 'react'
 import WebSiteImg1 from '../asserts/ecommerce-websites.jpg'
 import Todolist from '../asserts/todolist.png'
 import X from '../asserts/X-logo.jpg'
+import Task from '../asserts/task_managrment.png'
 const Projects = () => {
    const config ={
       projects :[
@@ -21,6 +22,10 @@ const Projects = () => {
             description:'X-clone app with the features of the twitter app.It is in developing state so the link will attach soon',
             links:'',
 
+        },{
+         image : Task ,
+         description : "A task management app built with the MERN stack (MongoDB, Express.js, React, and Node.js) is a full-stack web application designed to help users create, organize, and manage tasks efficiently. ",
+         links: "https://github.com/Ragulprasanth-26/Task-Management"
         }
       ]
    }

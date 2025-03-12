@@ -4,7 +4,7 @@ import { AiOutlineInstagram,AiOutlineFacebook,AiOutlineLinkedin } from 'react-ic
 const Hero = () => {
 
   const config ={
-    subtitle :'Im a Full-stack developer',
+    subtitle :'Im a Software developer',
     social: {
       instagram:'https://www.instagram.com/ragul_crick26?igsh=MTk2aTdxaDYwd2I5YQ==',
       facebook:'https://www.facebook.com/share/15xNLRkeDE/',
@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section className='flex flex-col md:flex-row px-5 py-32 bg-primary justify-center'>
         <div className='md:w-1/2 flex flex-col'>
-            <h1 className=' text-white text-6xl font-hero-font'>Hi <br />Im <span className='text-black'>A </span>Ragul Prasanth
+            <h1 className=' text-white text-6xl font-hero-font'>Hi <br />Im <span className='text-yellow-200'>A</span>.Ragul Prasanth
                 <p className='text-2xl'>{config.subtitle}</p>
             </h1>
             <div className='flex py-10 '>

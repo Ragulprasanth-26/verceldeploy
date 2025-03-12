@@ -6,10 +6,10 @@ header ul li {
   @apply px-2;
 }
 .bg-primary{
-  background: rgb(85 81 227);
+  background: black;
 }
 .bg-secondary{
-  background: #2b2d77
+  background: #9acd32;
 }
 .mobile-nav{
   @apply fixed top-10 left-0 bg-gray-800 h-1/4 w-full;
@@ -19,11 +19,11 @@ header ul li {
   @apply w-full h-10 text-center border-b-2 ;
 }
 .project-dis{
-  @apply absolute left-0 right-0 bottom-0 top-0 bg-secondary opacity-0 duration-500 hover:opacity-100
+  @apply absolute left-0 right-0 bottom-0 top-0 bg-secondary opacity-0 duration-500 hover:opacity-100 text-black font-semibold
 }
 .button{
   
-  @apply bg-primary px-5 py-2 font-bold hover:border-2 border-white rounded;
+  @apply bg-primary px-5 py-2 font-bold hover:border-2 border-white rounded text-white;
 }
 html
 {

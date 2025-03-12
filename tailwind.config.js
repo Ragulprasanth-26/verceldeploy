@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       borderColor : {
-        'primary': 'rgb(85 81 227)'
+        'primary': 'black'
       }
     },
     fontFamily: {

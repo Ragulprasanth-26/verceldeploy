@@ -11,9 +11,9 @@ const Resume = () => {
             <img className='w-[300px]' src={ResumeImg} alt="resumeimg" />
         </div>
         <div className='md:w-1/2 flex justify-center'>
-            <div className=' text-white flex flex-col justify-center'>
-                <h1 className=' text-4xl border-b-4 border-primary mb-5 w-[140px] font-bold'>Resume</h1>
-                <p className='pb-5' >You can view my resume <a href={config.link} className='button'>View</a> </p>
+            <div className=' text-black font-semibold flex flex-col justify-center'>
+                <h1 className=' text-4xl border-b-4 border-black mb-5 w-[140px] font-bold'>Resume</h1>
+                <p className='pb-5' >You can view my resume <a href={config.link} className='button text-white'>View</a> </p>
                 
             </div>
         </div>

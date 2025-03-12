@@ -14,7 +14,7 @@ const About = () => {
             <img src={AboutImg} alt="Aboutimg" />
         </div>
         <div className='md:w-1/2 flex justify-center'>
-            <div className=' text-white flex flex-col justify-center'>
+            <div className='text-black font-semibold flex flex-col justify-center'>
                 <h1 className=' text-4xl border-b-4 border-primary mb-5 w-[170px] font-bold'>About Me</h1>
                 <p className='pb-5' >{config.line1} </p>
                 <p className='pb-5'>{config.line2}</p>

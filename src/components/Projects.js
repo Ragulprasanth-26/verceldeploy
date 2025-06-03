@@ -1,7 +1,7 @@
 import React from 'react'
 import WebSiteImg1 from '../asserts/ecommerce-websites.jpg'
 import Todolist from '../asserts/todolist.png'
-import X from '../asserts/X-logo.jpg'
+import X from '../asserts/Java-Logo.png'
 import Task from '../asserts/task_managrment.png'
 
 const Projects = () => {
@@ -20,8 +20,8 @@ const Projects = () => {
          },
          {
             image: X,
-            description:'X-clone app with the features of the twitter app.It is in developing state so the link will attach soon',
-            links:'',
+            description:'Some train, flight, and taxi booking systems are developed using Java.Java provides a robust and secure platform for building reliable booking applications.These systems handle real-time bookings, payments, and user management efficiently',
+            links:'https://github.com/Ragulprasanth-26',
 
         },{
          image : Task ,

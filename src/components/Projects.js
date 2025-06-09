@@ -36,7 +36,7 @@ const Projects = () => {
             <div className='justify-center'>
               <h1 className=' text-4xl border-b-4 border-[#9acd32] mb-5 w-[150px] font-bold'> Projects</h1>
               <p className='py-5'>These are some of my best projects.I have built this with React,Java,MERN technologies.</p>
-              <p className='py-5'>1.Twitter Clone Web App – A social media platform where users can post, like, and interact with tweets.</p>
+              <p className='py-5'>1.Java Based Softwares – Softwares like train,flight reservation system,Mail Management system etc...</p>
               <p className='py-5'>2.Task Manager App – A tool to create, manage, and organize tasks with real-time updates.</p>
               <p className='py-5'>3.To-Do List App – A simple app to add, edit, and delete daily tasks.</p>
               <p className='py-5'>4.E-Commerce Website – An online store with product listings, shopping cart, and payment integration.</p>

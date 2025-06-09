@@ -21,7 +21,7 @@ const Projects = () => {
          {
             image: X,
             description:'Some train, flight, and taxi booking systems are developed using Java.Java provides a robust and secure platform for building reliable booking applications.These systems handle real-time bookings, payments, and user management efficiently',
-            links:'https://github.com/Ragulprasanth-26',
+            links:'https://github.com/Ragulprasanth-26/JAVA-PROGRAMS-java',
 
         },{
          image : Task ,

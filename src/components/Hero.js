@@ -18,9 +18,9 @@ const Hero = () => {
                 <p className='text-2xl'>{config.subtitle}</p>
             </h1>
             <div className='flex py-10 '>
-                <a href={config.social.instagram} className='pr-5 text-white'><AiOutlineInstagram size={40}/></a>
-                <a href={config.social.facebook} className='pr-5 text-white'><AiOutlineFacebook size={40} /></a>
-                <a href={config.social.linkedlin} className='pr-5 text-white'><AiOutlineLinkedin size={40}/></a>
+                <a href={config.social.instagram} className='pr-5 text-white hover:text-yellow-400'><AiOutlineInstagram size={40}/></a>
+                <a href={config.social.facebook} className='pr-5 text-white hover:text-yellow-400'><AiOutlineFacebook size={40} /></a>
+                <a href={config.social.linkedlin} className='pr-5 text-white hover:text-yellow-400'><AiOutlineLinkedin size={40}/></a>
             </div>
         </div>
         

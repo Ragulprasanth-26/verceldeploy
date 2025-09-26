@@ -4,9 +4,10 @@ import About from './components/About';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
-import Resume from './components/Resume';
-import Contact from './components/Contact';
+import Experience from './components/Experience';
+import Stats from './components/Stats';
 import Footer from './components/Footer';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
     <Hero ></Hero>
     <About />
     <Projects />
-    <Resume />
-    <Contact />
+    <Experience />
+    <Skills />
+    <Stats />
     <Footer />
    </div>
   );

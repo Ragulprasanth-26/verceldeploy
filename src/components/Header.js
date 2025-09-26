@@ -1,38 +1,73 @@
-import React, { useState } from 'react'
-import { Bars3Icon } from '@heroicons/react/24/solid'
+import React, { useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
 
-    
-     const [toggle,setToggle] =useState(false)
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Stats", href: "#awards-stats" },
+    { name: "Skills", href: "#skills" },
+  ];
+
   return (
-    
-    <header className='flex justify-between px-5 py-2 bg-primary'>
-       
-        <a className="font-bold text-yellow-200" href="https://www.canva.com/design/DAGgXBz0aeQ/Sb-RlLfP7emMziELN7czow/view?utm_content=DAGgXBz0aeQ&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hafcd7b8d76">A.Ragul Prasanth</a>
-        <nav className='hidden md:block'>
-            <ul className='flex text-white '>
-                <li className='hover:text-[#9acd32]'><a href="/">Home</a></li>
-                <li className='hover:text-[#9acd32]'><a href="#about">About</a></li>
-                <li className='hover:text-[#9acd32]'><a href="#projects">Projects</a></li>
-                <li className='hover:text-[#9acd32]'><a href="#resume">Resume</a></li>
-                <li className='hover:text-[#9acd32]'><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        {toggle && <nav className='block md:hidden '>
-            <ul onClick={()=> setToggle(!toggle)} className='flex-col text-white mobile-nav'>
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>}
-        <button className='block md:hidden' onClick={()=> setToggle(!toggle)}
-            ><Bars3Icon className='text-white h-5 '></Bars3Icon>
-        </button>
-    </header>
-  )
-}
+    <header className="fixed top-0 left-0 w-full bg-primary shadow-lg z-50 mb-10">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        {/* Logo */}
+        <a
+          className="font-bold text-yellow-400 text-2xl hover:text-yellow-300 transition-colors"
+          href="/"
+        >
+          A.Ragul Prasanth
+        </a>
 
-export default Header
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex">
+          <ul className="flex gap-6 text-white font-medium">
+            {navLinks.map((link) => (
+              <li
+                key={link.name}
+                className="relative group hover:text-yellow-400 transition-colors"
+              >
+                <a href={link.href}>{link.name}</a>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all"></span>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setToggle(!toggle)}
+        >
+          {toggle ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      <div
+        className={`md:hidden fixed top-0 left-0 h-full w-2/3 bg-primary shadow-lg transform transition-transform duration-300 ${
+          toggle ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <ul className="flex flex-col mt-20 gap-6 text-white px-6 text-lg font-medium">
+          {navLinks.map((link) => (
+            <li
+              key={link.name}
+              onClick={() => setToggle(false)}
+              className="hover:text-yellow-400 transition-colors"
+            >
+              <a href={link.href}>{link.name}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

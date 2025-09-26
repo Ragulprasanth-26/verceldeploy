@@ -42,7 +42,7 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-yellow-400 mb-3">Follow Me</h3>
           <div className="flex justify-center md:justify-start gap-6 text-2xl">
             <a
-              href="https://github.com/ragulprasanth"
+              href="https://github.com/Ragulprasanth-26"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-yellow-400 transition"

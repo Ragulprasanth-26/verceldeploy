@@ -6,16 +6,12 @@ import {
   Cell,
   Tooltip,
   ResponsiveContainer,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Legend,
 } from "recharts";
+import GitHubCalendar from "react-github-calendar";
 
 const AwardsStats = () => {
-  const leetCodeUsername = "RagulPrasanth"; // Replace with your LeetCode username
-  const githubUsername = "Ragulprasanth-26"; // GitHub username
+  const leetCodeUsername = "RagulPrasanth26";
+  const githubUsername = "Ragulprasanth-26";
 
   const codingStats = [
     { platform: "HackerRank", solved: 80, rank: "5⭐ Java", icon: <FaTrophy /> },
@@ -27,9 +23,7 @@ const AwardsStats = () => {
     hardSolved: 0,
   });
 
-  const [githubStats, setGithubStats] = useState([]);
-
-  const COLORS = ["#facc15", "#60a5fa", "#f87171"]; // Easy, Medium, Hard
+  const COLORS = ["#facc15", "#60a5fa", "#f87171"];
 
   // Fetch LeetCode stats
   useEffect(() => {
@@ -49,44 +43,7 @@ const AwardsStats = () => {
       }
     };
     fetchLeetStats();
-  }, []);
-
-  // Fetch GitHub contributions last 30 days
-  useEffect(() => {
-    const fetchGithubContributions = async () => {
-      try {
-        const res = await fetch(
-          `https://api.github.com/users/${githubUsername}/events/public`
-        );
-        const events = await res.json();
-
-        const now = new Date();
-        const last30Days = new Date();
-        last30Days.setDate(now.getDate() - 30);
-
-        const contributionsMap = {};
-
-        events.forEach((event) => {
-          if (event.type === "PushEvent" && new Date(event.created_at) >= last30Days) {
-            const date = event.created_at.split("T")[0];
-            contributionsMap[date] = (contributionsMap[date] || 0) + event.payload.commits.length;
-          }
-        });
-
-        const chartData = [];
-        for (let d = new Date(last30Days); d <= now; d.setDate(d.getDate() + 1)) {
-          const dateStr = d.toISOString().split("T")[0];
-          chartData.push({ date: dateStr.slice(5), contributions: contributionsMap[dateStr] || 0 });
-        }
-
-        setGithubStats(chartData);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-
-    fetchGithubContributions();
-  }, [githubUsername]);
+  }, [leetCodeUsername]);
 
   const leetChartData = [
     { name: "Easy", value: leetStats.easySolved },
@@ -100,13 +57,11 @@ const AwardsStats = () => {
 
         {/* LeetCode Pie Chart */}
         <div className="bg-black p-6 rounded-xl shadow-lg flex flex-col gap-6">
-          {/* Title on top */}
           <h2 className="text-yellow-400 text-2xl font-bold text-center w-full">
             LeetCode Problem Stats
           </h2>
 
           <div className="flex flex-col md:flex-row items-center gap-10">
-            {/* Pie Chart */}
             <ResponsiveContainer width="50%" height={300}>
               <PieChart>
                 <Pie
@@ -118,14 +73,22 @@ const AwardsStats = () => {
                   outerRadius={100}
                 >
                   {leetChartData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
                   ))}
                 </Pie>
-                <Tooltip contentStyle={{ backgroundColor: "#111", border: "none", color: "white" }} />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "#111",
+                    border: "none",
+                    color: "white",
+                  }}
+                />
               </PieChart>
             </ResponsiveContainer>
 
-            {/* Values next to chart */}
             <div className="flex flex-col gap-4">
               {leetChartData.map((entry, index) => (
                 <div key={index} className="flex items-center gap-3">
@@ -141,20 +104,16 @@ const AwardsStats = () => {
             </div>
           </div>
         </div>
-        {/* GitHub Bar Chart */}
-        <div className="bg-black p-6 rounded-xl shadow-lg">
-          <h2 className="text-yellow-400 text-2xl font-bold mb-6 text-center">
-            GitHub Contributions (Last 30 Days)
+
+        {/* GitHub Contributions - Yearly */}
+        {/* GitHub Contributions */}
+        <div className="bg-yellow-100 p-6 rounded-xl shadow-lg flex flex-col gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-8">
+            GitHub Contributions
           </h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={githubStats}>
-              <XAxis dataKey="date" tick={{ fill: "white", fontSize: 12 }} />
-              <YAxis tick={{ fill: "white", fontSize: 12 }} />
-              <Tooltip contentStyle={{ backgroundColor: "#111", border: "none", color: "white" }} />
-              <Legend />
-              <Bar dataKey="contributions" fill="#facc15" />
-            </BarChart>
-          </ResponsiveContainer>
+          <div className="flex justify-center">
+            <GitHubCalendar username="Ragulprasanth-26" colorScheme="dark" />
+          </div>
         </div>
 
         {/* Other Coding Profiles */}

@@ -1,13 +1,13 @@
 import React from "react";
 import HeroImg from "../asserts/hero.png";
-
+import resumeFile from '../asserts/resume.pdf'
 const Hero = () => {
   const config = {
     subtitle: "I'm a Software Developer 🚀",
     intro:
       "I specialize in building responsive and interactive web applications using modern technologies. Passionate about clean code, problem-solving, and creating intuitive user experiences.",
-    skills: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Java"],
-    resume: "/RagulPrasanth_Resume.pdf", // Place your resume in public folder
+    skills: ["React.js", "Python", "Express", "MongoDB", "Java","MySql"],
+    resume: resumeFile, // Place your resume in public folder
   };
 
   return (

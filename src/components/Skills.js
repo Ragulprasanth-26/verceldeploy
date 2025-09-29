@@ -1,5 +1,12 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaJava, FaPython, FaCogs, FaProjectDiagram } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaJava,
+  FaPython,
+  FaCogs,
+  FaProjectDiagram,
+} from "react-icons/fa";
 import { SiMongodb, SiTailwindcss, SiMysql, SiExpress } from "react-icons/si";
 import Marquee from "react-fast-marquee";
 
@@ -17,9 +24,15 @@ const Skills = () => {
   ];
 
   return (
-    <section className="bg-black py-20 px-6" id="skills">
-      <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 border-b-4 border-yellow-400 mb-12 w-[180px] mx-auto">
+    <section
+      id="skills"
+      className="relative py-20 px-6"
+    >
+      {/* Linear gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#f5e6d3] to-white"></div>
+
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#92400e] border-b-4 border-[#b45309] mb-12 w-[180px] mx-auto">
           Skills
         </h1>
 
@@ -28,7 +41,7 @@ const Skills = () => {
           {skills.map((skill, i) => (
             <span
               key={i}
-              className="flex items-center gap-2 bg-gray-900 text-yellow-400 px-5 py-2 rounded-full shadow-md font-semibold hover:bg-yellow-400 hover:text-black transition-all duration-300"
+              className="flex items-center gap-2 bg-[#fdf6f0] text-[#5c4033] px-5 py-2 rounded-full shadow-md font-semibold hover:bg-[#b45309] hover:text-white transition-all duration-300"
             >
               {skill.icon} {skill.name}
             </span>
@@ -46,7 +59,7 @@ const Skills = () => {
                     cx="50%"
                     cy="50%"
                     r="40%"
-                    stroke="#333"
+                    stroke="#e5e7eb"
                     strokeWidth="8"
                     fill="none"
                   />
@@ -55,7 +68,7 @@ const Skills = () => {
                     cx="50%"
                     cy="50%"
                     r="40%"
-                    stroke="#FFD700"
+                    stroke="#b45309"
                     strokeWidth="8"
                     strokeDasharray={`${2 * Math.PI * 40}`}
                     strokeDashoffset={`${
@@ -65,18 +78,18 @@ const Skills = () => {
                     className="transition-all duration-700"
                   />
                 </svg>
-                <span className="absolute inset-0 flex items-center justify-center text-white font-bold">
+                <span className="absolute inset-0 flex items-center justify-center text-[#92400e] font-bold">
                   {skill.level}%
                 </span>
               </div>
-              <p className="text-white mt-3 font-medium">{skill.name}</p>
+              <p className="text-[#5c4033] mt-3 font-medium">{skill.name}</p>
             </div>
           ))}
         </div>
 
         {/* Scrolling Tech Logos */}
         <Marquee gradient={false} speed={60}>
-          <div className="flex gap-16 text-6xl">
+          <div className="flex gap-16 text-6xl px-16">
             <FaReact className="text-cyan-400 hover:text-blue-500 transition-colors duration-300" />
             <SiExpress className="text-green-500 hover:text-green-400 transition-colors duration-300" />
             <SiMongodb className="text-green-600 hover:text-green-400 transition-colors duration-300" />

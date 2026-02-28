@@ -12,11 +12,18 @@ const Experience = () => {
     },
     {
       title: "Full Stack Developer - Qads, Karaikudi",
-      period: "Aug 2025 - Sep 2025",
+      period: "Aug 2025 - Oct 2025",
       role: "Full Stack Developer",
       details:
         "Worked as a Full Stack Developer, building responsive and interactive web applications using React.js, Express, PHP-Laravel and MySQL.",
     },
+    {
+      title: "Software Engineer - Syncfusion, Chennai",
+      period: "Nov 2025 - present",
+      role: "Software Engineer",
+      details:
+        "Worked as a Software Engineer contributing to the development, optimization, and maintenance of a core PDF processing library, focusing on performance, reliability, and scalable document handling.",
+    }
   ];
 
   return (

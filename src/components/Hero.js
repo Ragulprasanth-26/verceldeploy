@@ -10,7 +10,7 @@ const Hero = () => {
   const config = {
     intro:
       "I specialize in building responsive and interactive web applications using modern technologies. Passionate about clean code, problem-solving, and creating intuitive user experiences.",
-    skills: ["React.js", "Python", "Express", "MongoDB", "Java", "MySQL"],
+    skills: ["AI Intergration", "Typescript", "Javascript", "PDF-Library", "Prompt Engineering", "PDF Code"],
     resume: resumeFile,
     rightContent: "Focused on creating scalable and maintainable web applications with clean architecture and best practices."
   };

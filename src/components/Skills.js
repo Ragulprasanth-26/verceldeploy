@@ -6,21 +6,24 @@ import {
   FaPython,
   FaCogs,
   FaProjectDiagram,
+  FaRobot,
 } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss, SiMysql, SiExpress } from "react-icons/si";
 import Marquee from "react-fast-marquee";
+import { SiTypescript } from "react-icons/si";
+import { FaFilePdf } from "react-icons/fa";
 
 const Skills = () => {
   const skills = [
+    { name: "PDF Core", level: 95, icon: <FaFilePdf className="text-red-600" /> },
+    { name: "AI Integration", level: 95, icon: <FaRobot className="text-indigo-500" /> },
+    { name: "TypeScript", level: 90, icon: <SiTypescript className="text-blue-600" /> },
     { name: "Java", level: 95, icon: <FaJava className="text-red-500" /> },
     { name: "React.js", level: 90, icon: <FaReact className="text-cyan-400" /> },
-    { name: "Python", level: 90, icon: <FaPython className="text-yellow-300" /> },
     { name: "OOPs", level: 95, icon: <FaCogs className="text-purple-400" /> },
     { name: "DSA", level: 85, icon: <FaProjectDiagram className="text-pink-400" /> },
     { name: "MySQL", level: 80, icon: <SiMysql className="text-blue-500" /> },
     { name: "Express.js", level: 80, icon: <SiExpress className="text-green-500" /> },
-    { name: "Tailwind CSS", level: 75, icon: <SiTailwindcss className="text-sky-400" /> },
-    { name: "MongoDB", level: 70, icon: <SiMongodb className="text-green-600" /> },
   ];
 
   return (
@@ -71,9 +74,8 @@ const Skills = () => {
                     stroke="#b45309"
                     strokeWidth="8"
                     strokeDasharray={`${2 * Math.PI * 40}`}
-                    strokeDashoffset={`${
-                      2 * Math.PI * 40 - (2 * Math.PI * 40 * skill.level) / 100
-                    }`}
+                    strokeDashoffset={`${2 * Math.PI * 40 - (2 * Math.PI * 40 * skill.level) / 100
+                      }`}
                     fill="none"
                     className="transition-all duration-700"
                   />
@@ -90,13 +92,14 @@ const Skills = () => {
         {/* Scrolling Tech Logos */}
         <Marquee gradient={false} speed={60}>
           <div className="flex gap-16 text-6xl px-16">
+            <FaFilePdf className="text-red-600 hover:text-red-500 transition-colors duration-300" />
+            <SiTypescript className="text-blue-600 hover:text-blue-500 transition-colors duration-300" />
             <FaReact className="text-cyan-400 hover:text-blue-500 transition-colors duration-300" />
             <SiExpress className="text-green-500 hover:text-green-400 transition-colors duration-300" />
-            <SiMongodb className="text-green-600 hover:text-green-400 transition-colors duration-300" />
             <SiTailwindcss className="text-sky-400 hover:text-sky-300 transition-colors duration-300" />
             <FaJava className="text-red-500 hover:text-red-400 transition-colors duration-300" />
-            <FaPython className="text-yellow-300 hover:text-yellow-400 transition-colors duration-300" />
             <SiMysql className="text-blue-500 hover:text-blue-400 transition-colors duration-300" />
+            <FaRobot className="text-purple-500 hover:text-purple-400 transition-colors duration-300" />
           </div>
         </Marquee>
       </div>

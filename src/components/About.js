@@ -64,9 +64,7 @@ const About = () => {
                 <span className="text-[#92400e] font-semibold">
                   A. Ragul Prasanth
                 </span>
-                . I am a Full Stack Web Developer, passionate about building
-                interactive and responsive websites using React.js, Tailwind CSS,
-                Node.js, and MongoDB.
+                . PDF Core Engineer experienced in end-to-end PDF creation, manipulation, rendering, and optimization, with strong interest in AI prompting and full stack development using React and Node.js.
               </p>
             </div>
 

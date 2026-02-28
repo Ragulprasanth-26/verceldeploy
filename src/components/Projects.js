@@ -5,7 +5,7 @@ import X from "../asserts/Java-Logo.png";
 import Task from "../asserts/task_managrment.png";
 import qura from "../asserts/qura.png";
 import franchise from '../asserts/franchise.png';
-
+import pdf from '../asserts/pdf.jpg'
 const Projects = () => {
   const config = {
     projects: [
@@ -16,6 +16,8 @@ const Projects = () => {
           "Mini e-commerce website like Amazon/Meesho built with MERN stack and styled with Tailwind. (Status: Completed ✅ but not yet deployed)",
         links: "https://github.com/Ragulprasanth-26/mini-eccomance",
         techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+        company: "Inezt-Tech",
+        companyLink: "https://www.inetztech.com/"
       },
       {
         image: Todolist,
@@ -24,6 +26,7 @@ const Projects = () => {
           "A simple and clean To-Do List project built with React.js. Supports theme toggle and task management.",
         links:
           "https://github.com/Ragulprasanth-26/todolist-togcolor/tree/main/Todolist",
+        company: "Self Learning",
         techStack: ["React", "JavaScript", "CSS", "HTML"],
       },
       {
@@ -32,6 +35,7 @@ const Projects = () => {
         description:
           "Train, flight, and taxi booking systems developed using Java. Handles real-time bookings, payments, and user management.",
         links: "https://github.com/Ragulprasanth-26/JAVA-PROGRAMS-java",
+        company: "Self Learning",
         techStack: ["Java", "OOP", "Swing"],
       },
       {
@@ -40,6 +44,7 @@ const Projects = () => {
         description:
           "A full-stack task management app built with MERN stack. Helps users create, organize, and manage tasks with real-time updates.",
         links: "https://github.com/Ragulprasanth-26/Task-Management",
+        company: "Self Learning",
         techStack: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
       },
       {
@@ -50,6 +55,8 @@ const Projects = () => {
         links: "https://github.com/Ragulprasanth-26/Qura_properties",
         live: "https://quraproperties.in/",
         techStack: ["React.js", "Axios", "MySql", "Bootstrap CSS"],
+        company: "Qads",
+        companyLink: "https://qads.co.in/"
       },
       {
         image: franchise,
@@ -59,20 +66,31 @@ const Projects = () => {
         links: "https://github.com/Ragulprasanth-26/qads_franchise_site",
         live: "https://admin.qadsfranchise.com/login",
         techStack: ["React.js", "Axios", "MySql", "Bootstrap CSS"],
+        company: "Qads",
+        companyLink: "https://qads.co.in/"
+      },
+      {
+        image: pdf,
+        title: "EJ2-PDF Library",
+        description:
+          "A high-performance JavaScript PDF library built for generating, editing, and rendering PDF documents in web applications, supporting annotations, form handling, and optimized document processing.",
+        live: "https://document.syncfusion.com/demos/javascriptpdf/default#/bootstrap5",
+        techStack: ["JavaScript", "TypeScript", "EJ2 Framework", "PDF Object Model", "Image Decoding"],
+        company: "Syncfusion",
+        companyLink: "https://www.syncfusion.com/"
       },
     ],
   };
 
   return (
     <section className="relative py-16 px-5" id="projects">
-       <div className="absolute inset-0 bg-gradient-to-b from-white via-[#f5e6d3] to-white">
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-[#f5e6d3] to-white">
         <h1 className="text-4xl md:text-5xl font-bold text-[#92400e] border-b-4 border-[#b45309] w-fit mx-auto text-center">
-        Projects
-      </h1>
-       </div>
+          Projects
+        </h1>
+      </div>
       {/* Title */}
       
-
       {/* Card Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center my-12">
         {config.projects.map((project, index) => (
@@ -105,23 +123,36 @@ const Projects = () => {
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-4 mt-2">
-                <a
-                  href={project.links}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black text-white px-4 py-1 rounded-md font-semibold text-sm hover:bg-black transition"
-                >
-                  View on GitHub
-                </a>
+              <div className="flex flex-wrap gap-3 mt-4">
+                {project.links && (
+                  <a
+                    href={project.links}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-md bg-gray-900 text-white hover:bg-gray-800 transition duration-200"
+                  >
+                    View on GitHub
+                  </a>
+                )}
+
                 {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-700  text-white px-4 py-1 rounded-md font-semibold text-sm hover:bg-blue-700 transition"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-md bg-blue-600 text-white hover:bg-blue-700 transition duration-200"
                   >
                     View Live
+                  </a>
+                )}
+                {project.company && (
+                  <a
+                    href={project.companyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-md bg-yellow-500 text-black hover:bg-yellow-600 transition duration-200"
+                  >
+                    {project.company}
                   </a>
                 )}
               </div>

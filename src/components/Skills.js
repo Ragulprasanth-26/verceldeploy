@@ -1,14 +1,12 @@
 import React from "react";
 import {
   FaReact,
-  FaNodeJs,
   FaJava,
-  FaPython,
   FaCogs,
   FaProjectDiagram,
   FaRobot,
 } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss, SiMysql, SiExpress } from "react-icons/si";
+import { SiTailwindcss, SiMysql, SiExpress } from "react-icons/si";
 import Marquee from "react-fast-marquee";
 import { SiTypescript } from "react-icons/si";
 import { FaFilePdf } from "react-icons/fa";

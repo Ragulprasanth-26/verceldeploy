@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
